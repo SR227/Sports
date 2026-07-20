@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-level="casual" data-bg="us" data-tz="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your first play — Kansas City Chiefs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-level="casual" data-bg="us" data-tz="et" data-team="chiefs">
+
+<div class="quiz-overlay" id="quizOverlay">
+  <div class="quiz-box">
+
+    <div class="quiz-step" data-step="1">
+      <div class="quiz-progress">Question 1 of 3</div>
+      <p class="quiz-q">If a team doesn't gain 10 yards in four tries, what happens?</p>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-q1="rookie">Not totally sure</button>
+        <button class="quiz-opt" data-q1="know">The other team gets the ball where it stopped</button>
+        <button class="quiz-opt" data-q1="rookie">They get to try again</button>
+      </div>
+      <button class="quiz-skip" data-skip>Skip this, just show me the page</button>
+    </div>
+
+    <div class="quiz-step" data-step="2" hidden>
+      <div class="quiz-progress">Question 2 of 3</div>
+      <p class="quiz-q">Which sport do you already follow closely?</p>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-q2="rugby">Rugby</button>
+        <button class="quiz-opt" data-q2="us">Already follow American sports</button>
+        <button class="quiz-opt" data-q2="us">Cricket, soccer, or something else</button>
+        <button class="quiz-opt" data-q2="us">None really — I'm new to sports too</button>
+      </div>
+      <button class="quiz-skip" data-skip>Skip this, just show me the page</button>
+    </div>
+
+    <div class="quiz-step" data-step="3" hidden>
+      <div class="quiz-progress">Question 3 of 3</div>
+      <p class="quiz-q">Where are you usually watching from?</p>
+      <div class="quiz-opts">
+        <button class="quiz-opt" data-q3="et">US / Canada</button>
+        <button class="quiz-opt" data-q3="sast">South Africa</button>
+        <button class="quiz-opt" data-q3="et">Somewhere else</button>
+      </div>
+      <button class="quiz-skip" data-skip>Skip this, just show me the page</button>
+    </div>
+
+    <div class="quiz-step quiz-done" data-step="done" hidden>
+      <p class="quiz-q" style="font-size:20px;">Got it — building your page</p>
+      <p>You can always change this later using the controls at the top.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="rules-modal" id="rulesModal" hidden>
+  <div class="rules-panel">
+    <div class="rules-panel-head">
+      <h2>How football works</h2>
+      <button class="rules-close" id="closeRules" aria-label="Close">✕</button>
+    </div>
+
+    <div class="rules-section">
+      <h3>How long is a game, actually?</h3>
+      <p class="lvl-rookie bg-us">A game is split into four <strong>quarters</strong> of 15 minutes each, with a longer break at <strong>halftime</strong> (after quarter 2). But the clock stops constantly — incomplete passes, players going out of bounds, penalties — so a game actually takes about <strong>3 hours</strong> to finish in real time, not one hour.</p>
+      <p class="lvl-rookie bg-rugby">Four <strong>quarters</strong> of 15 minutes, with a break at halftime — like two rugby halves split into four. The catch: the clock stops constantly for incomplete passes, players stepping out, and penalties, so a game runs about <strong>3 hours</strong> in real time, much longer than an 80-minute rugby match.</p>
+      <p class="lvl-casual">Four 15-minute quarters, halftime after quarter 2. Real-world runtime is closer to 3 hours because the clock stops often — commercial breaks and replay reviews stretch it further.</p>
+      <p class="lvl-know">Standard four-quarter, 15-minute structure with a 12-minute halftime. Regular season ties go to a single 10-minute overtime; if still tied, it ends in a draw. Playoffs use full overtime periods until there's a winner.</p>
+    </div>
+
+    <div class="rules-section">
+      <h3>Who does what — offense</h3>
+      <p class="lvl-rookie bg-us">The team with the ball is on <strong>offense</strong>, trying to move it forward and score.</p>
+      <p class="lvl-rookie bg-rugby">The team with the ball is on <strong>offense</strong> — same idea as your team being in possession, driving forward phase by phase.</p>
+      <div class="position-grid">
+        <div class="position-card">
+          <span class="pos-name">Quarterback (QB)</span>
+          <p>Gets the ball first, throws passes or hands it off. <span class="bg-rugby">Closest thing to a flyhalf.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Running Back (RB)</span>
+          <p>Carries the ball on the ground. <span class="bg-rugby">Think inside centre — takes it up the middle.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Wide Receiver (WR)</span>
+          <p>Runs downfield to catch passes. <span class="bg-rugby">Similar to a winger chasing space.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Tight End (TE)</span>
+          <p>Catches passes and blocks — a hybrid role. <span class="bg-rugby">Part loose forward, part receiver.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Offensive Line</span>
+          <p>Five players who protect the QB and clear running lanes. <span class="bg-rugby">Your front row and locks, essentially.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-section">
+      <h3>Who does what — defense</h3>
+      <p class="lvl-rookie bg-us">The other team is on <strong>defense</strong>, trying to stop the offense and take the ball back.</p>
+      <div class="position-grid">
+        <div class="position-card">
+          <span class="pos-name">Defensive Line</span>
+          <p>Rushes the QB and stops runs at the line. <span class="bg-rugby">Front-row equivalent, going forward.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Linebacker (LB)</span>
+          <p>Stops both runs and short passes — the defense's all-rounders. <span class="bg-rugby">Like your loose forwards.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Cornerback (CB)</span>
+          <p>Covers receivers one-on-one to stop passes. <span class="bg-rugby">Marks a winger, essentially.</span></p>
+        </div>
+        <div class="position-card">
+          <span class="pos-name">Safety</span>
+          <p>Plays deepest, covers the biggest plays. <span class="bg-rugby">Similar role to a fullback.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-section">
+      <h3>Special teams — the third unit</h3>
+      <p class="lvl-rookie">There's also a <strong>special teams</strong> unit for kicks — field goals, punts, and kickoffs. It only comes on for those specific plays, not the whole game.</p>
+      <p class="lvl-know">Special teams covers kickoffs, punts, and field goal attempts — a separate roster of specialists (kicker, punter, long snapper, returners) who only take the field for those situational plays.</p>
+    </div>
+
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hash-row" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <span class="eyebrow">Field guide · <span id="eyebrowTeam">Kansas City Chiefs</span></span>
+      <div class="theme-toggle" role="group" aria-label="Switch jersey color theme">
+        <button class="active" data-set-theme="home"><span class="jersey-dot home-dot"></span>Home</button>
+        <button data-set-theme="away"><span class="jersey-dot away-dot"></span>Away</button>
+      </div>
+    </div>
+    <h1>Know the game<br>before <span>kickoff</span></h1>
+    <p>A short guide to this season, written for exactly where you're starting from — including your timezone and the sport you already know.</p>
+
+    <div class="controls">
+      <div class="control-group">
+        <span class="control-label">Need the basics?</span>
+        <button class="pill-btn" id="openRules">How football works</button>
+      </div>
+      <div class="control-group">
+        <span class="control-label">Following</span>
+        <select class="team-select" id="teamSelect">
+          <option value="chiefs">Kansas City Chiefs</option>
+          <option value="bills">Buffalo Bills</option>
+          <option value="eagles">Philadelphia Eagles</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <span class="control-label">Knowledge level</span>
+        <button class="pill-btn" data-set-level="rookie">Rookie</button>
+        <button class="pill-btn active" data-set-level="casual">Casual fan</button>
+        <button class="pill-btn" data-set-level="know">Know the game</button>
+      </div>
+      <div class="control-group">
+        <span class="control-label">Explain using</span>
+        <button class="pill-btn active" data-set-bg="us">General terms</button>
+        <button class="pill-btn" data-set-bg="rugby">Rugby comparisons</button>
+      </div>
+      <div class="control-group">
+        <span class="control-label">Kickoff times in</span>
+        <button class="pill-btn active" data-set-tz="et">US Eastern</button>
+        <button class="pill-btn" data-set-tz="sast">South Africa (SAST)</button>
+      </div>
+      <div class="control-group">
+        <button class="retake" id="retakeQuiz">↺ Retake the 3-question quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <div class="storyline" id="storylineBlock">
+    <h2>Why this season matters</h2>
+    <div id="storylineContent"><!-- rendered by app.js from team-data.js --></div>
+  </div>
+
+  <p class="section-label">Upcoming games</p>
+
+  <div id="gamesContainer"><!-- game cards rendered by app.js from team-data.js --></div>
+
+  <p class="section-label">Key names to know</p>
+  <div class="position-grid" id="keyPlayersContainer"><!-- rendered by app.js from team-data.js --></div>
+
+  <div class="signup">
+    <h3>Get next week's card before kickoff</h3>
+    <p>One email, the week's game explained at your level, in your timezone.</p>
+    <form class="signup-form">
+      <input type="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit">Notify me</button>
+    </form>
+    <p class="note">Prototype only — this form doesn't send real emails. Built to test whether people would sign up.</p>
+  </div>
+
+</main>
+
+<footer>
+  A concept test for a sports guide, not an official NFL or Chiefs product.
+</footer>
+
+<script src="team-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
