@@ -491,6 +491,9 @@ footer{
   border:1px solid var(--border-faint);
   border-radius:10px;
   padding:14px 16px;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
 }
 .position-card .pos-name{
   font-family:'IBM Plex Mono', monospace; font-size:11px;
@@ -498,6 +501,36 @@ footer{
   display:block; margin-bottom:5px;
 }
 .position-card p{font-size:13.5px; margin:0; color:var(--chalk);}
+.position-card-body{flex:1; min-width:0;}
+
+.jersey-badge{
+  flex-shrink:0;
+  width:44px; height:48px;
+}
+.jersey-shape{
+  fill: var(--gold);
+}
+.jersey-number{
+  fill: var(--pill-on-accent);
+  font-family:'IBM Plex Mono', monospace;
+  font-weight:700;
+  font-size:20px;
+  text-anchor:middle;
+  dominant-baseline:central;
+}
+.role-badge{
+  flex-shrink:0;
+  width:44px; height:44px;
+  border-radius:50%;
+  background:var(--night-2);
+  border:1.5px solid var(--gold);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'IBM Plex Mono', monospace;
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:0.02em;
+  color:var(--gold);
+}
 
 .position-diagram{
   width:100%;

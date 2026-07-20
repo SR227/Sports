@@ -15,8 +15,8 @@ const TEAM_DATA = {
       rugbyAside: "Worth knowing: the NFL has been actively investing in South Africa and the rest of Africa lately — fan events, talent scouting, flag football tournaments — so you're getting into this at a moment the league is specifically trying to reach you."
     },
     keyPlayers: [
-      { name: "Patrick Mahomes", role: "Quarterback", note: "The engine of the offense — this year's biggest question is whether his surgically repaired knee holds up." },
-      { name: "Travis Kelce", role: "Tight End", note: "Mahomes' most trusted target for a decade, and this may be his final season." },
+      { name: "Patrick Mahomes", role: "Quarterback", number: "15", note: "The engine of the offense — this year's biggest question is whether his surgically repaired knee holds up." },
+      { name: "Travis Kelce", role: "Tight End", number: "87", note: "Mahomes' most trusted target for a decade, and this may be his final season." },
       { name: "Kenneth Walker III", role: "Running Back", note: "Reigning Super Bowl MVP, added this offseason to fix a run game that's been the offense's weak spot." },
       { name: "Andy Reid", role: "Head Coach", note: "The league's longest-tenured head coach — his offensive scheme has defined this team's identity for years." }
     ],
@@ -58,10 +58,10 @@ const TEAM_DATA = {
       rugbyAside: "Think of this like a squad keeping its star flyhalf but overhauling the forward pack's structure — the headline player stays, but how the team lines up around him changes completely."
     },
     keyPlayers: [
-      { name: "Josh Allen", role: "Quarterback", note: "Still the engine of this team through the coaching change — arguably at the peak of his powers right now." },
+      { name: "Josh Allen", role: "Quarterback", number: "17", note: "Still the engine of this team through the coaching change — arguably at the peak of his powers right now." },
       { name: "Joe Brady", role: "Head Coach", note: "Replaces longtime coach Sean McDermott — first year running the whole team, not just the offense." },
       { name: "Jim Leonhard", role: "Defensive Coordinator", note: "New hire installing a base 3-4 defense, a real departure from the previous zone-heavy scheme." },
-      { name: "Dion Dawkins", role: "Offensive Tackle", note: "Anchors the offensive line protecting Allen — one of the roster's most experienced veterans." }
+      { name: "Dion Dawkins", role: "Offensive Tackle", number: "73", note: "Anchors the offensive line protecting Allen — one of the roster's most experienced veterans." }
     ],
     games: [
       {
@@ -101,9 +101,9 @@ const TEAM_DATA = {
       rugbyAside: "Picture a team that won the title, had a form dip, and then moved on a star back three — the group left behind is talented but has to figure out its shape all over again."
     },
     keyPlayers: [
-      { name: "Jalen Hurts", role: "Quarterback", note: "Under real pressure to bounce back after a 2025 season that fizzled out late." },
-      { name: "DeVonta Smith", role: "Wide Receiver", note: "Now the unquestioned WR1 after the A.J. Brown trade — his biggest opportunity yet." },
-      { name: "Saquon Barkley", role: "Running Back", note: "Still the engine of this offense entering his ninth season." },
+      { name: "Jalen Hurts", role: "Quarterback", number: "1", note: "Under real pressure to bounce back after a 2025 season that fizzled out late." },
+      { name: "DeVonta Smith", role: "Wide Receiver", number: "6", note: "Now the unquestioned WR1 after the A.J. Brown trade — his biggest opportunity yet." },
+      { name: "Saquon Barkley", role: "Running Back", number: "26", note: "Still the engine of this offense entering his ninth season." },
       { name: "Sean Mannion", role: "Offensive Coordinator", note: "New hire — the team's fifth OC in five years — tasked with fixing an attack that lost its way in 2025." }
     ],
     games: [

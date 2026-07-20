@@ -80,11 +80,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (keyPlayersEl && team.keyPlayers) {
       keyPlayersEl.innerHTML = team.keyPlayers.map(p => `
         <div class="position-card">
-          <span class="pos-name">${p.name} · ${p.role}</span>
-          <p>${p.note}</p>
+          ${p.number ? `
+            <svg class="jersey-badge" viewBox="0 0 60 64">
+              <path class="jersey-shape" d="M15,8 L24,4 L36,4 L45,8 L45,14 L52,19 L45,26 L45,56 L15,56 L15,26 L8,19 L15,14 Z"/>
+              <text x="30" y="36" class="jersey-number">${p.number}</text>
+            </svg>
+          ` : `
+            <div class="role-badge">${roleInitials(p.role)}</div>
+          `}
+          <div class="position-card-body">
+            <span class="pos-name">${p.name} · ${p.role}</span>
+            <p>${p.note}</p>
+          </div>
         </div>
       `).join('');
     }
+  }
+
+  function roleInitials(role) {
+    const map = { "Head Coach": "HC", "Offensive Coordinator": "OC", "Defensive Coordinator": "DC" };
+    if (map[role]) return map[role];
+    return role.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
   }
 
   // Team selector
