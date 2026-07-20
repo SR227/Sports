@@ -123,6 +123,29 @@ document.addEventListener('DOMContentLoaded', () => {
     syncPills('data-set-tz', b.dataset.setTz);
   }));
 
+  // Position diagram — hover/click/keyboard to show role info
+  const posInfoPanel = document.getElementById('posInfoPanel');
+  const posMarkers = document.querySelectorAll('.pos-marker-group');
+
+  function showPosInfo(group) {
+    posMarkers.forEach(m => m.classList.remove('active'));
+    group.classList.add('active');
+    const name = group.dataset.name;
+    const useRugby = body.getAttribute('data-bg') === 'rugby';
+    const note = useRugby && group.dataset.rugby ? group.dataset.rugby : group.dataset.note;
+    posInfoPanel.querySelector('.pos-info-name').textContent = name;
+    posInfoPanel.querySelector('.pos-info-note').textContent = note;
+  }
+
+  posMarkers.forEach(group => {
+    group.addEventListener('mouseenter', () => showPosInfo(group));
+    group.addEventListener('click', () => showPosInfo(group));
+    group.addEventListener('focus', () => showPosInfo(group));
+    group.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showPosInfo(group); }
+    });
+  });
+
   // How Football Works modal
   const rulesModal = document.getElementById('rulesModal');
   document.getElementById('openRules').addEventListener('click', () => {

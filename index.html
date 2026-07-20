@@ -71,53 +71,72 @@
     </div>
 
     <div class="rules-section">
-      <h3>Who does what — offense</h3>
-      <p class="lvl-rookie bg-us">The team with the ball is on <strong>offense</strong>, trying to move it forward and score.</p>
-      <p class="lvl-rookie bg-rugby">The team with the ball is on <strong>offense</strong> — same idea as your team being in possession, driving forward phase by phase.</p>
-      <div class="position-grid">
-        <div class="position-card">
-          <span class="pos-name">Quarterback (QB)</span>
-          <p>Gets the ball first, throws passes or hands it off. <span class="bg-rugby">Closest thing to a flyhalf.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Running Back (RB)</span>
-          <p>Carries the ball on the ground. <span class="bg-rugby">Think inside centre — takes it up the middle.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Wide Receiver (WR)</span>
-          <p>Runs downfield to catch passes. <span class="bg-rugby">Similar to a winger chasing space.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Tight End (TE)</span>
-          <p>Catches passes and blocks — a hybrid role. <span class="bg-rugby">Part loose forward, part receiver.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Offensive Line</span>
-          <p>Five players who protect the QB and clear running lanes. <span class="bg-rugby">Your front row and locks, essentially.</span></p>
-        </div>
-      </div>
-    </div>
+      <h3>Who lines up where</h3>
+      <p class="lvl-rookie bg-us">The team with the ball is on <strong>offense</strong> (left, gold), trying to move it forward. The other team is on <strong>defense</strong> (right, dark), trying to stop them. Notice how defenders line up directly across from the offensive player they're matched against — that's not an accident.</p>
+      <p class="lvl-rookie bg-rugby">Offense (left, gold) has the ball and drives forward, phase by phase. Defense (right, dark) lines up to stop them — and just like a rugby defensive line matching up man-for-man, each defender is positioned directly across from the attacker they're responsible for.</p>
+      <p class="note" style="margin-top:0;">Tap or hover any position below to see its role.</p>
 
-    <div class="rules-section">
-      <h3>Who does what — defense</h3>
-      <p class="lvl-rookie bg-us">The other team is on <strong>defense</strong>, trying to stop the offense and take the ball back.</p>
-      <div class="position-grid">
-        <div class="position-card">
-          <span class="pos-name">Defensive Line</span>
-          <p>Rushes the QB and stops runs at the line. <span class="bg-rugby">Front-row equivalent, going forward.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Linebacker (LB)</span>
-          <p>Stops both runs and short passes — the defense's all-rounders. <span class="bg-rugby">Like your loose forwards.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Cornerback (CB)</span>
-          <p>Covers receivers one-on-one to stop passes. <span class="bg-rugby">Marks a winger, essentially.</span></p>
-        </div>
-        <div class="position-card">
-          <span class="pos-name">Safety</span>
-          <p>Plays deepest, covers the biggest plays. <span class="bg-rugby">Similar role to a fullback.</span></p>
-        </div>
+      <svg class="position-diagram" viewBox="0 0 640 320" role="img" aria-label="Football formation diagram">
+        <rect x="0" y="0" width="640" height="320" class="field-bg" rx="10"/>
+        <line x1="320" y1="10" x2="320" y2="310" class="los-line"/>
+        <text x="320" y="0" dy="20" text-anchor="middle" class="los-label">LINE OF SCRIMMAGE</text>
+
+        <!-- Offense -->
+        <g class="pos-marker-group off" tabindex="0" role="button" data-name="Wide Receiver (WR)" data-note="Runs downfield to catch passes." data-rugby="Similar to a winger chasing space.">
+          <circle cx="300" cy="35" r="15" class="pos-marker"/>
+          <text x="300" y="35" class="pos-abbr">WR</text>
+        </g>
+        <g class="pos-marker-group off" tabindex="0" role="button" data-name="Offensive Line" data-note="Five players who protect the QB and clear running lanes." data-rugby="Your front row and locks, essentially.">
+          <rect x="288" y="65" width="24" height="150" rx="8" class="pos-marker"/>
+          <text x="300" y="140" class="pos-abbr" transform="rotate(-90 300 140)">OL</text>
+        </g>
+        <g class="pos-marker-group off" tabindex="0" role="button" data-name="Tight End (TE)" data-note="Catches passes and blocks — a hybrid role." data-rugby="Part loose forward, part receiver.">
+          <circle cx="300" cy="245" r="15" class="pos-marker"/>
+          <text x="300" y="245" class="pos-abbr">TE</text>
+        </g>
+        <g class="pos-marker-group off" tabindex="0" role="button" data-name="Wide Receiver (WR)" data-note="Runs downfield to catch passes." data-rugby="Similar to a winger chasing space.">
+          <circle cx="300" cy="290" r="15" class="pos-marker"/>
+          <text x="300" y="290" class="pos-abbr">WR</text>
+        </g>
+        <g class="pos-marker-group off" tabindex="0" role="button" data-name="Quarterback (QB)" data-note="Gets the ball first, throws passes or hands it off." data-rugby="Closest thing to a flyhalf.">
+          <circle cx="245" cy="160" r="16" class="pos-marker"/>
+          <text x="245" y="160" class="pos-abbr">QB</text>
+        </g>
+        <g class="pos-marker-group off" tabindex="0" role="button" data-name="Running Back (RB)" data-note="Carries the ball on the ground." data-rugby="Think inside centre — takes it up the middle.">
+          <circle cx="190" cy="160" r="15" class="pos-marker"/>
+          <text x="190" y="160" class="pos-abbr">RB</text>
+        </g>
+
+        <!-- Defense -->
+        <g class="pos-marker-group def" tabindex="0" role="button" data-name="Cornerback (CB)" data-note="Covers receivers one-on-one to stop passes." data-rugby="Marks a winger, essentially.">
+          <circle cx="340" cy="35" r="15" class="pos-marker"/>
+          <text x="340" y="35" class="pos-abbr">CB</text>
+        </g>
+        <g class="pos-marker-group def" tabindex="0" role="button" data-name="Defensive Line" data-note="Rushes the QB and stops runs at the line." data-rugby="Front-row equivalent, going forward.">
+          <rect x="328" y="90" width="24" height="140" rx="8" class="pos-marker"/>
+          <text x="340" y="160" class="pos-abbr" transform="rotate(-90 340 160)">DL</text>
+        </g>
+        <g class="pos-marker-group def" tabindex="0" role="button" data-name="Cornerback (CB)" data-note="Covers receivers one-on-one to stop passes." data-rugby="Marks a winger, essentially.">
+          <circle cx="340" cy="290" r="15" class="pos-marker"/>
+          <text x="340" y="290" class="pos-abbr">CB</text>
+        </g>
+        <g class="pos-marker-group def" tabindex="0" role="button" data-name="Linebacker (LB)" data-note="Stops both runs and short passes — the defense's all-rounders." data-rugby="Like your loose forwards.">
+          <circle cx="395" cy="160" r="16" class="pos-marker"/>
+          <text x="395" y="160" class="pos-abbr">LB</text>
+        </g>
+        <g class="pos-marker-group def" tabindex="0" role="button" data-name="Safety" data-note="Plays deepest, covers the biggest plays." data-rugby="Similar role to a fullback.">
+          <circle cx="470" cy="95" r="15" class="pos-marker"/>
+          <text x="470" y="95" class="pos-abbr">S</text>
+        </g>
+        <g class="pos-marker-group def" tabindex="0" role="button" data-name="Safety" data-note="Plays deepest, covers the biggest plays." data-rugby="Similar role to a fullback.">
+          <circle cx="470" cy="230" r="15" class="pos-marker"/>
+          <text x="470" y="230" class="pos-abbr">S</text>
+        </g>
+      </svg>
+
+      <div class="pos-info-panel" id="posInfoPanel">
+        <span class="pos-info-name">Tap or hover a position</span>
+        <p class="pos-info-note">The diagram mirrors where each side actually lines up — defenders sit across from whoever they're matched against.</p>
       </div>
     </div>
 

@@ -499,6 +499,69 @@ footer{
 }
 .position-card p{font-size:13.5px; margin:0; color:var(--chalk);}
 
+.position-diagram{
+  width:100%;
+  height:auto;
+  margin:16px 0 14px;
+  border-radius:10px;
+}
+.field-bg{ fill: var(--turf); }
+.los-line{ stroke: var(--border-strong); stroke-width:2; stroke-dasharray:6 5; }
+.los-label{
+  fill: var(--mist);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:9px;
+  letter-spacing:0.08em;
+}
+.pos-marker-group{ cursor:pointer; }
+.pos-marker{
+  fill: var(--night-2);
+  stroke: var(--border-strong);
+  stroke-width:1.5;
+  transition: fill .15s ease, stroke .15s ease;
+}
+.pos-marker-group.off .pos-marker{ stroke: var(--gold); }
+.pos-marker-group.def .pos-marker{ stroke: var(--red); }
+.pos-marker-group:hover .pos-marker,
+.pos-marker-group.active .pos-marker,
+.pos-marker-group:focus-visible .pos-marker{
+  fill: var(--gold);
+  stroke: var(--gold);
+}
+.pos-marker-group.def:hover .pos-marker,
+.pos-marker-group.def.active .pos-marker,
+.pos-marker-group.def:focus-visible .pos-marker{
+  fill: var(--red);
+  stroke: var(--red);
+}
+.pos-marker-group:focus-visible{ outline:none; }
+.pos-abbr{
+  fill: var(--chalk);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  font-weight:600;
+  text-anchor:middle;
+  dominant-baseline:central;
+  pointer-events:none;
+}
+.pos-info-panel{
+  background:var(--night);
+  border:1px solid var(--border-faint);
+  border-radius:10px;
+  padding:14px 16px;
+  min-height:64px;
+}
+.pos-info-name{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:block;
+  margin-bottom:6px;
+}
+.pos-info-note{ margin:0; font-size:14px; color:var(--chalk); }
+
 @media (max-width:520px){
   .position-grid{grid-template-columns:1fr;}
 }
