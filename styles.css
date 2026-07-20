@@ -509,6 +509,9 @@ footer{
 }
 .jersey-shape{
   fill: var(--gold);
+  stroke: var(--red-deep);
+  stroke-width:1.5;
+  stroke-linejoin:round;
 }
 .jersey-number{
   fill: var(--pill-on-accent);

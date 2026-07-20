@@ -82,8 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="position-card">
           ${p.number ? `
             <svg class="jersey-badge" viewBox="0 0 60 64">
-              <path class="jersey-shape" d="M15,8 L24,4 L36,4 L45,8 L45,14 L52,19 L45,26 L45,56 L15,56 L15,26 L8,19 L15,14 Z"/>
-              <text x="30" y="36" class="jersey-number">${p.number}</text>
+              <path class="jersey-shape" d="M22,6
+                C24,4 27,3 30,3
+                C33,3 36,4 38,6
+                L46,9
+                C49,10 51,13 51,16
+                C51,19 49,22 46,23
+                L45,23.5
+                L45,54
+                C45,56.5 43,58 40,58
+                L20,58
+                C17,58 15,56.5 15,54
+                L15,23.5
+                L14,23
+                C11,22 9,19 9,16
+                C9,13 11,10 14,9
+                Z"/>
+              <text x="30" y="38" class="jersey-number">${p.number}</text>
             </svg>
           ` : `
             <div class="role-badge">${roleInitials(p.role)}</div>
